@@ -28,7 +28,7 @@ export const AddUser = () => {
   const handleName = (e) => setName(e.target.value);
   const handleEmail = (e) => setEmail(e.target.value);
 
-  const usersAmount = useSelector((state) => state.users.length);
+  const usersAmount = useSelector((state) => state.users.entities.length);
 
   const handleClick = () => {
     if (name && email) {
