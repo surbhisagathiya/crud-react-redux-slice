@@ -10,14 +10,14 @@ export default function App() {
     <Router>
       <div>
         <Switch>
-          <Route path="/add-user">
-            <AddUser />
+          <Route path="/add-user" component={AddUser} exact>
+            {/* <AddUser /> */}
           </Route>
-          <Route path="/edit-user">
-            <EditUser />
+          <Route path="/edit-user" component={EditUser} exact>
+            {/* <EditUser /> */}
           </Route>
-          <Route path="/">
-            <UserList />
+          <Route path="/" component={UserList} exact>
+            {/* <UserList /> */}
           </Route>
         </Switch>
       </div>
