@@ -1,3 +1,13 @@
+import {
+  Box,
+  Button,
+  ButtonGroup,
+  Container,
+  FormControl,
+  FormLabel,
+  Heading,
+  Input,
+} from "@chakra-ui/react";
 import React from "react";
 import { useState } from "react";
 import { useSelector } from "react-redux";
@@ -43,11 +53,50 @@ export const EditUser = () => {
   };
 
   return (
-    <div className="container">
-      <div className="row">
-        <h1>Edit User</h1>
-      </div>
-      <div className="row">
+    <Container>
+      <Heading as="h3" size="lg" color="green" align="center">
+        Edit User
+      </Heading>
+      <Box my={4} textAlign="left">
+        <form>
+          <FormControl>
+            <FormLabel>Name</FormLabel>
+            <Input
+              type="text"
+              placeholder="Enter your name"
+              onChange={handleName}
+              value={name}
+              _focus={{ boxShadow: "none" }}
+            />
+          </FormControl>
+
+          <FormControl>
+            <FormLabel>Email</FormLabel>
+            <Input
+              type="email"
+              placeholder="Enter your Email"
+              onChange={handleEmail}
+              value={email}
+              _focus={{ boxShadow: "none" }}
+            />
+          </FormControl>
+          {error && error}
+          <ButtonGroup
+            variant="outline"
+            spacing="6"
+            display="block"
+            align="right"
+            my={4}
+          >
+            <Button colorScheme="blue" onClick={handleClick}>
+              Update
+            </Button>
+            <Button>Cancel</Button>
+          </ButtonGroup>
+        </form>
+      </Box>
+
+      {/* <div className="row">
         <div className="three columns">
           <label>Name</label>
           <input
@@ -70,7 +119,7 @@ export const EditUser = () => {
             Save user
           </button>
         </div>
-      </div>
-    </div>
+      </div> */}
+    </Container>
   );
 };
