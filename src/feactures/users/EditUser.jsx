@@ -57,7 +57,7 @@ export const EditUser = () => {
       <Heading as="h3" size="lg" color="green" align="center">
         Edit User
       </Heading>
-      <Box my={4} textAlign="left">
+      {/* <Box my={4} textAlign="left">
         <form>
           <FormControl>
             <FormLabel>Name</FormLabel>
@@ -94,9 +94,9 @@ export const EditUser = () => {
             <Button>Cancel</Button>
           </ButtonGroup>
         </form>
-      </Box>
+      </Box> */}
 
-      {/* <div className="row">
+      <div className="row">
         <div className="three columns">
           <label>Name</label>
           <input
@@ -119,7 +119,7 @@ export const EditUser = () => {
             Save user
           </button>
         </div>
-      </div> */}
+      </div>
     </Container>
   );
 };
